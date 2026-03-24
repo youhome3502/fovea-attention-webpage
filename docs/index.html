@@ -15,15 +15,13 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #333;
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f6fa;
         }
-        
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
@@ -32,233 +30,274 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header .subtitle { font-size: 1.2em; opacity: 0.9; }
-        .metrics { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
-        .metric { background: rgba(255,255,255,0.15); padding: 15px 30px; border-radius: 12px; }
-        .metric-value { font-size: 2.2em; font-weight: bold; }
-        .metric-label { font-size: 0.9em; opacity: 0.9; }
+        header h1 { font-size: 2.2em; margin-bottom: 10px; }
+        header .subtitle { font-size: 1.1em; opacity: 0.9; }
+        .metrics { display: flex; justify-content: center; gap: 25px; margin-top: 25px; flex-wrap: wrap; }
+        .metric { background: rgba(255,255,255,0.15); padding: 12px 25px; border-radius: 10px; }
+        .metric-value { font-size: 1.8em; font-weight: bold; }
+        .metric-label { font-size: 0.85em; opacity: 0.9; }
         
-        /* Navigation */
-        nav { background: white; padding: 12px 20px; border-radius: 10px; margin-bottom: 25px; position: sticky; top: 10px; z-index: 100; }
-        nav ul { display: flex; gap: 15px; list-style: none; flex-wrap: wrap; justify-content: center; }
-        nav a { color: var(--primary); text-decoration: none; padding: 6px 12px; border-radius: 6px; font-weight: 500; }
+        nav { background: white; padding: 10px 20px; border-radius: 10px; margin-bottom: 25px; position: sticky; top: 10px; z-index: 100; }
+        nav ul { display: flex; gap: 12px; list-style: none; flex-wrap: wrap; justify-content: center; }
+        nav a { color: var(--primary); text-decoration: none; padding: 5px 10px; border-radius: 5px; font-weight: 500; }
         nav a:hover { background: var(--primary); color: white; }
         
-        /* Sections */
         section { background: white; padding: 30px; border-radius: 14px; margin-bottom: 25px; }
-        h2 { color: var(--dark); font-size: 1.5em; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; }
-        h3 { color: var(--dark); font-size: 1.15em; margin: 25px 0 15px; }
-        p { margin-bottom: 15px; }
+        h2 { color: var(--dark); font-size: 1.4em; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 20px; }
+        h3 { color: var(--dark); font-size: 1.1em; margin: 25px 0 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
         
-        /* Cards */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
-        .card { background: linear-gradient(135deg, #f8f9fa, #fff); border: 1px solid #e9ecef; border-radius: 12px; padding: 25px; }
-        .card.best { background: linear-gradient(135deg, #d4edda, #c3e6cb); border: 2px solid var(--success); }
-        .card-icon { font-size: 2em; margin-bottom: 10px; }
-        .card-title { font-size: 1.1em; font-weight: bold; color: var(--dark); margin-bottom: 10px; }
-        .card-desc { font-size: 0.95em; color: #666; }
-        .card-score { font-size: 1.8em; font-weight: bold; color: var(--success); margin-top: 15px; }
+        .highlight { background: #e8f4fd; border-left: 4px solid var(--primary); padding: 15px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+        .key-finding { background: #d4edda; border-left: 4px solid var(--success); padding: 15px 20px; border-radius: 0 8px 8px 0; margin: 15px 0; }
         
-        /* Tables */
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th { background: var(--primary); color: white; padding: 12px 10px; text-align: left; }
-        td { padding: 12px 10px; border-bottom: 1px solid #eee; }
+        td { padding: 10px; border-bottom: 1px solid #eee; }
         tr:hover { background: #f8f9fa; }
         tr.best { background: #d4edda; }
         
-        /* Images */
         .chart-container { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; text-align: center; border: 1px solid #eee; }
         .chart-container img { max-width: 100%; height: auto; border-radius: 8px; }
         
-        /* Tags */
-        .tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; margin: 2px; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; }
         .tag.rl { background: var(--success); color: white; }
         .tag.fovea { background: var(--primary); color: white; }
-        .tag.uncertainty { background: var(--purple); color: white; }
+        .tag.baseline { background: #95a5a6; color: white; }
         
-        /* Findings */
-        .finding { background: #f8f9fa; border-left: 4px solid var(--success); padding: 20px; border-radius: 0 10px 10px 0; margin: 20px 0; }
-        .finding-number { font-size: 1.5em; font-weight: bold; color: var(--success); margin-right: 10px; }
+        footer { text-align: center; padding: 20px; color: #95a5a6; margin-top: 30px; }
         
-        /* Footer */
-        footer { text-align: center; padding: 25px; color: #95a5a6; margin-top: 30px; }
-        
-        /* Setup Table */
-        .setup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-        .setup-item { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
-        .setup-label { font-size: 0.85em; color: #666; }
-        .setup-value { font-size: 1.1em; font-weight: bold; color: var(--dark); }
+        ul { margin: 10px 0 15px 25px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Fovea Attention</h1>
+    <h1>Fovea Attention Research</h1>
     <p class="subtitle">Bio-inspired Visual Perception with Reinforcement Learning</p>
     <div class="metrics">
         <div class="metric"><div class="metric-value">84.79%</div><div class="metric-label">Best Accuracy</div></div>
-        <div class="metric"><div class="metric-value">+24.8%</div><div class="metric-label">vs Baseline</div></div>
-        <div class="metric"><div class="metric-value">3</div><div class="metric-label">Key Methods</div></div>
+        <div class="metric"><div class="metric-value">+2.59%</div><div class="metric-label">vs Baseline</div></div>
+        <div class="metric"><div class="metric-value">CIFAR-10</div><div class="metric-label">Dataset</div></div>
     </div>
 </header>
 
 <nav>
     <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#ideas">Core Ideas</a></li>
-        <li><a href="#methods">Methods</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#related">Related Work</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#experiments">Experiments</a></li>
         <li><a href="#results">Results</a></li>
-        <li><a href="#findings">Findings</a></li>
+        <li><a href="#ablation">Ablation</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
     </ul>
 </nav>
 
-<!-- 1. OVERVIEW -->
-<section id="overview">
-    <h2>Overview</h2>
-    
-    <h3>The Problem</h3>
-    <p>How can we build neural networks that see like humans? The human visual system uses <strong>foveal vision</strong> — processing a small central region at high resolution while maintaining peripheral awareness at lower resolution. This research investigates whether mimicking this biological architecture can significantly improve deep learning performance.</p>
-    
-    <div class="setup-grid">
-        <div class="setup-item"><div class="setup-label">Dataset</div><div class="setup-value">CIFAR-10</div></div>
-        <div class="setup-item"><div class="setup-label">Image Size</div><div class="setup-value">32×32</div></div>
-        <div class="setup-item"><div class="setup-label">Classes</div><div class="setup-value">10</div></div>
-        <div class="setup-item"><div class="setup-label">Training</div><div class="setup-value">50,000</div></div>
-        <div class="setup-item"><div class="setup-label">Test</div><div class="setup-value">10,000</div></div>
-        <div class="setup-item"><div class="setup-label">Device</div><div class="setup-value">MPS (Apple GPU)</div></div>
-    </div>
-    
-    <h3>Baseline Comparison</h3>
-    <table>
-        <tr><th>Model</th><th>Test Accuracy</th><th>Description</th></tr>
-        <tr><td>Plain ResNet18</td><td>60.00%</td><td>Standard baseline (5 epochs)</td></tr>
-        <tr><td>ResNet18 Extended</td><td>82.20%</td><td>Extended training (20 epochs)</td></tr>
-        <tr><td><strong>Fovea + RL (Ours)</strong></td><td><strong>84.79%</strong></td><td><strong>Best result</strong></td></tr>
-    </table>
+<!-- Abstract -->
+<section id="abstract">
+    <h2>Abstract</h2>
+    <p>This research investigates bio-inspired fovea attention mechanisms in deep neural networks for visual classification. We implement and compare multiple approaches: fixed fovea positioning, learnable attention, Vision Transformers with uncertainty estimation, and reinforcement learning-based active gaze control.</p>
+    <p>Our experiments on CIFAR-10 demonstrate that <strong>RL-based active attention achieves 84.79% accuracy</strong>, a <strong>+2.59% improvement</strong> over the ResNet18 baseline (82.20%). Notably, our analysis reveals that with extended training (20 epochs), the baseline itself achieves strong performance, making the improvement margin more modest but more meaningful.</p>
+    <div class="key-finding"><strong>Key Contribution:</strong> End-to-end RL training of gaze policy enables dynamic attention positioning that outperforms fixed and learnable alternatives.</div>
 </section>
 
-<!-- 2. CORE IDEAS -->
-<section id="ideas">
-    <h2>Core Ideas</h2>
-    <p>Four key innovations driving our approach:</p>
+<!-- Introduction -->
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>The human visual system processes information with remarkable efficiency through foveal vision — a small central region provides high-acuity perception while peripheral vision maintains broader awareness at lower resolution. This biological architecture raises a fundamental question: <strong>can artificial neural networks benefit from similar selective attention mechanisms?</strong></p>
     
-    <div class="card-grid">
-        <div class="card">
-            <div class="card-icon">🎯</div>
-            <div class="card-title">Fixed Fovea</div>
-            <div class="card-desc">Process only 6.25% of pixels at full resolution. Center (8×8) captures detail, periphery provides context.</div>
-        </div>
-        
-        <div class="card">
-            <div class="card-icon">🤔</div>
-            <div class="card-title">Uncertainty Estimation</div>
-            <div class="card-desc">MC Dropout provides confidence scores. Multiple forward passes yield prediction + uncertainty.</div>
-        </div>
-        
-        <div class="card">
-            <div class="card-icon">🧠</div>
-            <div class="card-title">RL Gaze Control</div>
-            <div class="card-desc">PPO-based policy learns where to look. Active attention beats fixed positioning.</div>
-        </div>
-        
-        <div class="card best">
-            <div class="card-icon">🏆</div>
-            <div class="card-title">End-to-End RL</div>
-            <div class="card-desc">Full system trained with reinforcement learning. Gaze policy optimized directly for classification accuracy.</div>
-            <div class="card-score">84.79%</div>
-        </div>
-    </div>
+    <p>Traditional convolutional neural networks process all image regions equally, treating every pixel with equivalent computational resources. This approach is both computationally inefficient and biologically implausible. Humans naturally focus computational resources on informative regions, a principle known as visual attention.</p>
+    
+    <p>This research systematically explores fovea-inspired attention mechanisms across multiple paradigms:</p>
+    <ul>
+        <li><strong>Fixed fovea:</strong> Always attend to image center at high resolution</li>
+        <li><strong>Learnable attention:</strong> Network learns optimal gaze positions</li>
+        <li><strong>Uncertainty estimation:</strong> Quantify prediction confidence</li>
+        <li><strong>RL-based active attention:</strong> Optimize gaze through reinforcement learning</li>
+    </ul>
+    
+    <div class="highlight"><strong>Research Question:</strong> Can bio-inspired attention mechanisms improve deep learning performance on visual classification tasks?</div>
 </section>
 
-<!-- 3. METHODS -->
-<section id="methods">
-    <h2>Methods</h2>
+<!-- Related Work -->
+<section id="related">
+    <h2>Related Work</h2>
     
-    <h3>M2: FoveaResNet (Fixed Attention)</h3>
+    <h3>Attention Mechanisms in Vision</h3>
+    <p>Attention mechanisms have become fundamental in modern computer vision. From Squeeze-and-Excitation networks to Vision Transformers, the field has explored various ways to weight feature importance. Our work specifically focuses on <strong>spatial attention</strong> — determining which image regions deserve computational focus.</p>
+    
+    <h3>Biologically Inspired Vision</h3>
+    <p>Fovea-inspired architectures draw from biological vision research. The mammalian visual system allocates disproportionate cortical resources to foveal representations. Computational models attempting to replicate this include:</p>
+    <ul>
+        <li>GlanceNet and similar glimpse-based models</li>
+        <li>Recurrent Attention Models (RAM)</li>
+        <li>Spatial transformer networks</li>
+    </ul>
+    
+    <h3>Reinforcement Learning for Attention</h3>
+    <p>RL provides a natural framework for gaze control where the reward signal (classification accuracy) directly optimizes attention positioning. Prior work demonstrates that policy gradient methods can learn effective visual search strategies.</p>
+</section>
+
+<!-- Method -->
+<section id="method">
+    <h2>Method</h2>
+    
+    <h3>M2: Fixed FoveaResNet</h3>
     <p>Two-stream architecture processing center and periphery separately:</p>
     <ul>
         <li><strong>Center path:</strong> 8×8 patch at full 32×32 resolution (6.25% of pixels)</li>
         <li><strong>Periphery path:</strong> Downsample 2×, process, upsample back</li>
-        <li><strong>Fusion:</strong> Element-wise addition after matching dimensions</li>
+        <li><strong>Fusion:</strong> Element-wise addition after dimension matching</li>
     </ul>
-    <p><strong>Result:</strong> 81.93% (20 epochs), +21.93% over baseline</p>
+    <p><strong>Result:</strong> 81.93% (20 epochs)</p>
     
-    <h3>M11: UncertaintyViT (Confidence)</h3>
-    <p>Vision Transformer with Bayesian uncertainty estimation:</p>
+    <h3>M9: Learnable Fovea with GlimpseLocator</h3>
+    <p>Network learns optimal gaze positions through soft-argmax differentiable attention:</p>
     <ul>
-        <li><strong>Architecture:</strong> Patch embeddings + transformer blocks</li>
-        <li><strong>Uncertainty:</strong> MC Dropout with 5 forward passes</li>
-        <li><strong>Output:</strong> Mean = prediction, Std = confidence</li>
+        <li>Spatial attention produces probability distribution over locations</li>
+        <li>Soft-argmax provides differentiable center estimation</li>
+        <li>Gaze position guides fovea placement</li>
     </ul>
-    <p><strong>Result:</strong> 72.40% (20 epochs), +12.40% over baseline</p>
+    <p><strong>Result:</strong> 75.74% (20 epochs)</p>
     
-    <h3>M14: RL Gaze Control (Active Attention)</h3>
-    <p>Reinforcement learning for optimal gaze selection:</p>
+    <h3>M11: UncertaintyViT</h3>
+    <p>Vision Transformer with Bayesian uncertainty via MC Dropout:</p>
+    <ul>
+        <li>Patch embeddings + transformer blocks</li>
+        <li>5 forward passes with dropout enabled</li>
+        <li>Mean = prediction, Std = confidence</li>
+    </ul>
+    <p><strong>Result:</strong> 72.40% (20 epochs)</p>
+    
+    <h3>M14: RL Gaze Control (Ours)</h3>
+    <p>Proximal Policy Optimization for active attention:</p>
     <ul>
         <li><strong>Policy Network:</strong> Encodes features, outputs gaze coordinates</li>
         <li><strong>Algorithm:</strong> PPO with clipped surrogate objective</li>
         <li><strong>Reward:</strong> Classification accuracy</li>
-        <li><strong>Exploration:</strong> Entropy bonus for diverse gaze strategies</li>
+        <li><strong>Exploration:</strong> Entropy bonus for diverse strategies</li>
     </ul>
-    <p><strong>Result:</strong> 84.79% (20 epochs), <strong>+24.79% over baseline</strong></p>
+    <p><strong>Result:</strong> 84.79% (20 epochs)</p>
 </section>
 
-<!-- 4. RESULTS -->
+<!-- Experiments -->
+<section id="experiments">
+    <h2>Experiments</h2>
+    
+    <h3>Setup</h3>
+    <table>
+        <tr><td><strong>Dataset</strong></td><td>CIFAR-10 (32×32 RGB, 10 classes)</td></tr>
+        <tr><td><strong>Training</strong></td><td>50,000 images</td></tr>
+        <tr><td><strong>Test</strong></td><td>10,000 images</td></tr>
+        <tr><td><strong>Optimizer</strong></td><td>Adam (lr=0.001)</td></tr>
+        <tr><td><strong>Batch Size</strong></td><td>128</td></tr>
+        <tr><td><strong>Epochs</strong></td><td>20 (with early stopping patience=5)</td></tr>
+        <tr><td><strong>Device</strong></td><td>Apple M-series GPU (MPS)</td></tr>
+    </table>
+    
+    <h3>Models Tested</h3>
+    <p>We evaluate 6 models trained for 20 epochs each, comparing against the ResNet18 baseline:</p>
+    <table>
+        <tr><th>Model</th><th>Epochs</th><th>Test Accuracy</th><th>vs Baseline</th></tr>
+        <tr class="best"><td><strong>M14 RL</strong></td><td>20</td><td><strong>84.79%</strong></td><td><strong>+2.59%</strong></td></tr>
+        <tr><td>M1 Baseline</td><td>20</td><td>82.20%</td><td>0%</td></tr>
+        <tr><td>M2 Fovea</td><td>20</td><td>81.93%</td><td>-0.27%</td></tr>
+        <tr><td>M9 Learnable</td><td>20</td><td>75.74%</td><td>-6.46%</td></tr>
+        <tr><td>M11 Uncertainty</td><td>20</td><td>72.40%</td><td>-9.80%</td></tr>
+        <tr><td>M12 MRAM</td><td>20</td><td>66.06%</td><td>-16.14%</td></tr>
+    </table>
+    
+    <div class="chart-container">
+        <img src="vis/model_comparison.png" alt="Model Comparison">
+    </div>
+</section>
+
+<!-- Results -->
 <section id="results">
     <h2>Results</h2>
     
-    <h3>Performance Comparison</h3>
-    <table>
-        <tr><th>Rank</th><th>Method</th><th>Architecture</th><th>Test Accuracy</th><th>Improvement</th><th>Type</th></tr>
-        <tr class="best"><td>1</td><td><strong>M14 RL</strong></td><td>FoveaResNet + PPO</td><td><strong>84.79%</strong></td><td><strong>+24.79%</strong></td><td><span class="tag rl">RL</span></td></tr>
-        <tr><td>2</td><td>M2 FoveaResNet</td><td>Fovea + ResNet</td><td>81.93%</td><td>+21.93%</td><td><span class="tag fovea">Fovea</span></td></tr>
-        <tr><td>3</td><td>M11 Uncertainty</td><td>ViT + MC Dropout</td><td>72.40%</td><td>+12.40%</td><td><span class="tag uncertainty">Uncertainty</span></td></tr>
-        <tr><td>4</td><td>Baseline</td><td>Plain ResNet18</td><td>60.00%</td><td>0%</td><td>Baseline</td></tr>
-    </table>
+    <h3>Key Findings</h3>
+    
+    <div class="key-finding">
+        <strong>1. RL-based active attention achieves best performance.</strong>
+        <p>M14 with PPO (84.79%) outperforms the baseline (82.20%) by +2.59%. The network learns to dynamically position gaze based on image content.</p>
+    </div>
+    
+    <div class="highlight">
+        <strong>2. Fixed fovea is competitive with baseline.</strong>
+        <p>M2 FoveaResNet (81.93%) achieves comparable performance to the plain ResNet18 baseline (82.20%), demonstrating that fovea attention maintains accuracy while potentially reducing computation.</p>
+    </div>
+    
+    <div class="highlight">
+        <strong>3. Learnable attention underperforms fixed alternatives.</strong>
+        <p>Surprisingly, M9 Learnable (75.74%) performs worse than fixed fovea (81.93%). Analysis shows the network converges to near-center positions anyway, suggesting that for CIFAR-10 with centered objects, fixed attention is sufficient.</p>
+    </div>
+    
+    <div class="highlight">
+        <strong>4. Extended training significantly impacts results.</strong>
+        <p>Training duration matters critically. The baseline improved from 60% (5 epochs) to 82.20% (20 epochs). Fair comparison requires consistent training length.</p>
+    </div>
     
     <h3>Visualizations</h3>
     <div class="chart-container"><img src="vis/cifar10_samples.png" alt="CIFAR-10 Samples"></div>
-    <div class="chart-container"><img src="vis/experiment_comparison.png" alt="Experiment Comparison"></div>
-    <div class="chart-container"><img src="vis/architecture_evolution.png" alt="Architecture Evolution"></div>
-    <div class="chart-container"><img src="vis/ablation_study.png" alt="Ablation Study"></div>
     <div class="chart-container"><img src="vis/training_curves.png" alt="Training Curves"></div>
-    <div class="chart-container"><img src="vis/module_contribution.png" alt="Module Contribution"></div>
-    <div class="chart-container"><img src="vis/fovea_masks_comparison.png" alt="Fovea Masks Comparison"></div>
-    <div class="chart-container"><img src="vis/attention_map_demo.png" alt="Attention Map Demo"></div>
-    <div class="chart-container"><img src="vis/performance_comparison.png" alt="Performance Comparison"></div>
+    <div class="chart-container"><img src="vis/fovea_masks_comparison.png" alt="Fovea Masks"></div>
+    <div class="chart-container"><img src="vis/attention_map_demo.png" alt="Attention Maps"></div>
 </section>
 
-<!-- 5. FINDINGS -->
-<section id="findings">
-    <h2>Key Findings</h2>
+<!-- Ablation -->
+<section id="ablation">
+    <h2>Ablation Study</h2>
     
-    <div class="finding">
-        <span class="finding-number">1</span>
-        <strong>RL-based active attention significantly outperforms passive methods.</strong>
-        <p>M14 with PPO (84.79%) beats fixed fovea (81.93%) by +2.86%. The network learns to dynamically position gaze based on image content.</p>
+    <h3>Center Size Analysis</h3>
+    <p>The center size determines how much of the image is processed at full resolution:</p>
+    <table>
+        <tr><th>Center Size</th><th>Accuracy</th><th>Analysis</th></tr>
+        <tr><td>4×4 (1.56%)</td><td>56.58%</td><td>Too small — limited high-resolution region</td></tr>
+        <tr class="best"><td>8×8 (6.25%)</td><td>81.93%</td><td><strong>Optimal balance</strong></td></tr>
+        <tr><td>12×12 (14.06%)</td><td>61.03%</td><td>Too large — reduced peripheral information</td></tr>
+        <tr><td>16×16 (25%)</td><td>59.50%</td><td>Almost no periphery — defeats purpose</td></tr>
+    </table>
+    
+    <div class="key-finding">
+        <strong>Key Finding:</strong> The optimal center size of 8×8 (6.25% of pixels) mirrors human vision where the fovea covers 1-2% of visual field but provides most visual acuity.
     </div>
     
-    <div class="finding">
-        <span class="finding-number">2</span>
-        <strong>Optimal fovea size is ~6% of image area.</strong>
-        <p>Center size 8×8 on 32×32 images (6.25%) achieves best results. This mirrors human vision where fovea covers 1-2% of visual field but provides most acuity.</p>
+    <h3>Training Duration</h3>
+    <p>Extended training is critical for fair comparison:</p>
+    <table>
+        <tr><th>Model</th><th>5 Epochs</th><th>20 Epochs</th><th>Delta</th></tr>
+        <tr><td>Baseline (ResNet18)</td><td>60.00%</td><td>82.20%</td><td>+22.20%</td></tr>
+        <tr><td>FoveaResNet</td><td>68.99%</td><td>81.93%</td><td>+12.94%</td></tr>
+    </table>
+</section>
+
+<!-- Conclusion -->
+<section id="conclusion">
+    <h2>Conclusion</h2>
+    
+    <p>This research systematically explores bio-inspired fovea attention mechanisms for visual classification. Our key findings:</p>
+    
+    <ol>
+        <li><strong>RL-based active attention is effective:</strong> End-to-end reinforcement learning enables the network to learn optimal gaze strategies, achieving 84.79% accuracy (+2.59% over baseline).</li>
+        <li><strong>Fixed fovea provides competitive performance:</strong> Simple fixed-center attention achieves 81.93%, comparable to the plain baseline while potentially reducing computation.</li>
+        <li><strong>Optimal fovea size exists:</strong> 8×8 center (6.25% of 32×32 image) provides the best balance between detail and context.</li>
+        <li><strong>Training duration matters:</strong> Fair comparison requires consistent training length across all models.</li>
+    </ol>
+    
+    <div class="key-finding">
+        <h3>Final Result</h3>
+        <p>Our RL-based fovea attention achieves <strong>84.79% accuracy</strong> on CIFAR-10, demonstrating that bio-inspired active attention mechanisms can improve visual perception in deep neural networks.</p>
     </div>
     
-    <div class="finding">
-        <span class="finding-number">3</span>
-        <strong>Uncertainty estimation adds value without accuracy penalty.</strong>
-        <p>MC Dropout provides calibrated confidence scores. The model becomes more uncertain (0.16 → 0.38) as training progresses, indicating better calibration.</p>
-    </div>
-    
-    <div class="finding">
-        <span class="finding-number">4</span>
-        <strong>End-to-end training with RL enables novel gaze strategies.</strong>
-        <p>The learned policy develops non-trivial attention patterns that differ from human fovea. The network discovers effective strategies beyond simple center-surround.</p>
-    </div>
-    
-    <h3>Conclusion</h3>
-    <p>Bio-inspired fovea attention combined with reinforcement learning achieves <strong>84.79% accuracy</strong> on CIFAR-10, a <strong>+24.79% improvement</strong> over the plain ResNet18 baseline. This demonstrates that active, learned attention mechanisms can substantially improve visual perception in deep neural networks.</p>
+    <h3>Future Work</h3>
+    <ul>
+        <li>Scale to larger datasets (CIFAR-100, ImageNet)</li>
+        <li>Explore hierarchical multi-scale attention</li>
+        <li>Real-time gaze control applications</li>
+    </ul>
 </section>
 
 <footer>
