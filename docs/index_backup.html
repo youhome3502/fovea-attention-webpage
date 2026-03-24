@@ -9,17 +9,14 @@
             --primary: #3498db;
             --success: #27ae60;
             --warning: #f39c12;
-            --danger: #e74c3c;
-            --purple: #9b59b6;
             --dark: #2c3e50;
-            --light: #ecf0f1;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
             color: #333;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
             background: #f5f6fa;
@@ -27,110 +24,74 @@
         header {
             background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
-            padding: 50px 40px;
-            border-radius: 16px;
-            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 25px;
             text-align: center;
         }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header .subtitle { font-size: 1.2em; opacity: 0.9; }
-        .metrics {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-        .metric {
-            background: rgba(255,255,255,0.15);
-            padding: 15px 25px;
-            border-radius: 10px;
-        }
-        .metric-value { font-size: 1.8em; font-weight: bold; }
-        .metric-label { opacity: 0.8; font-size: 0.85em; }
+        header h1 { font-size: 2.2em; margin-bottom: 10px; }
+        .metrics { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .metric { background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 8px; }
+        .metric-value { font-size: 1.6em; font-weight: bold; }
+        .metric-label { font-size: 0.85em; opacity: 0.9; }
         
-        nav {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            position: sticky;
-            top: 10px;
-            z-index: 100;
-        }
-        nav ul { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; }
-        nav a { color: var(--primary); text-decoration: none; font-weight: 500; padding: 4px 10px; border-radius: 5px; }
+        nav { background: white; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; }
+        nav ul { display: flex; gap: 10px; list-style: none; flex-wrap: wrap; }
+        nav a { color: var(--primary); text-decoration: none; padding: 4px 8px; border-radius: 4px; }
         nav a:hover { background: var(--primary); color: white; }
         
-        section {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-        }
-        h2 { color: var(--dark); font-size: 1.5em; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; }
-        h3 { color: var(--dark); font-size: 1.2em; margin: 30px 0 15px; }
-        h4 { color: #555; font-size: 1em; margin: 20px 0 10px; }
-        p { margin-bottom: 15px; }
+        section { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; }
+        h2 { color: var(--dark); font-size: 1.4em; border-left: 4px solid var(--primary); padding-left: 12px; margin-bottom: 20px; }
+        h3 { color: var(--dark); font-size: 1.1em; margin: 20px 0 12px; }
+        p { margin-bottom: 12px; }
         
-        .highlight { background: #e8f4fd; border-left: 5px solid var(--primary); padding: 18px 22px; border-radius: 0 10px 10px 0; margin: 18px 0; }
-        .key-finding { background: #d4edda; border-left: 5px solid var(--success); padding: 18px 22px; border-radius: 0 10px 10px 0; margin: 18px 0; }
-        .warning { background: #fff3cd; border-left: 5px solid var(--warning); padding: 15px 20px; border-radius: 0 8px 8px 0; }
+        .highlight { background: #e8f4fd; border-left: 4px solid var(--primary); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; }
+        .key-finding { background: #d4edda; border-left: 4px solid var(--success); padding: 15px; border-radius: 0 8px 8px 0; margin: 15px 0; }
         
-        .phase { background: #f8f9fa; border-radius: 12px; padding: 25px; margin: 25px 0; border: 1px solid #e9ecef; }
-        .phase.best { background: linear-gradient(135deg, #d4edda, #c3e6cb); border: 2px solid var(--success); }
+        .module { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .module.best { background: linear-gradient(135deg, #d4edda, #c3e6cb); border: 2px solid var(--success); }
+        .module-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+        .module-title { font-size: 1.2em; font-weight: bold; }
+        .module-score { background: var(--primary); color: white; padding: 6px 15px; border-radius: 15px; font-weight: bold; }
+        .module.best .module-score { background: var(--success); }
         
-        .phase-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .phase-title { font-size: 1.3em; font-weight: bold; color: var(--dark); }
-        .phase-score { background: var(--primary); color: white; padding: 8px 18px; border-radius: 20px; font-weight: bold; }
-        .phase.best .phase-score { background: var(--success); }
-        
-        table { width: 100%; border-collapse: collapse; margin: 18px 0; }
-        th { background: var(--primary); color: white; padding: 12px 10px; text-align: left; }
-        td { padding: 10px; border-bottom: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th { background: var(--primary); color: white; padding: 10px 8px; text-align: left; }
+        td { padding: 8px; border-bottom: 1px solid #eee; }
         tr:hover { background: #f8f9fa; }
         tr.best { background: #d4edda; }
         
-        .chart-container { background: #fafafa; padding: 20px; margin: 20px 0; border-radius: 10px; text-align: center; }
-        .chart-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
+        .chart-container { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; text-align: center; border: 1px solid #eee; }
+        .chart-container img { max-width: 100%; height: auto; border-radius: 6px; }
         
-        pre { background: #2c3e50; color: #ecf0f1; padding: 18px; border-radius: 10px; overflow-x: auto; font-size: 0.85em; margin: 15px 0; }
-        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 0.85em; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
         
-        .tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; margin: 2px; }
-        .tag.baseline { background: #ddd; }
-        .tag.fovea { background: var(--primary); color: white; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin: 2px; }
         .tag.rl { background: var(--success); color: white; }
-        .tag.vit { background: var(--purple); color: white; }
+        .tag.fovea { background: var(--primary); color: white; }
         
-        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
-        
-        footer { text-align: center; padding: 25px; color: #95a5a6; border-top: 1px solid #eee; margin-top: 30px; }
-        
-        .word-count { font-size: 0.8em; color: #95a5a6; text-align: right; margin-top: 10px; }
+        footer { text-align: center; padding: 20px; color: #95a5a6; margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Fovea Attention Research</h1>
-    <p class="subtitle">Bio-inspired Visual Perception with Deep Learning</p>
+    <p>Bio-inspired Visual Perception with Deep Learning</p>
     <div class="metrics">
         <div class="metric"><div class="metric-value">84.80%</div><div class="metric-label">Best Accuracy</div></div>
         <div class="metric"><div class="metric-value">+24.8%</div><div class="metric-label">Improvement</div></div>
         <div class="metric"><div class="metric-value">14</div><div class="metric-label">Experiments</div></div>
-        <div class="metric"><div class="metric-value">6</div><div class="metric-label">Phases</div></div>
     </div>
 </header>
 
 <nav>
     <ul>
         <li><a href="#overview">Overview</a></li>
-        <li><a href="#phases">Research Phases</a></li>
+        <li><a href="#modules">Modules</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#ablation">Ablation</a></li>
-        <li><a href="#comparison">Comparison</a></li>
         <li><a href="#conclusions">Conclusions</a></li>
     </ul>
 </nav>
@@ -142,253 +103,129 @@
     <h3>Research Motivation</h3>
     <p>The human visual system processes information with remarkable efficiency. The <strong>fovea</strong> - a small region in the center of the retina - provides high-acuity vision for detailed tasks, while <strong>peripheral vision</strong> provides broader context at lower resolution. This research investigates whether mimicking this biological architecture can improve deep learning models.</p>
     
-    <p>Our key questions: Can selective attention mechanisms improve neural networks? Should attention be fixed or learned? How does uncertainty estimation affect perception? These questions guide our systematic exploration through 6 research phases.</p>
-    
     <div class="highlight">
-        <h4>Core Hypothesis</h4>
-        <p>Fovea-inspired attention mechanisms can significantly improve deep learning models by selectively processing informative regions at high resolution while maintaining contextual awareness through peripheral processing.</p>
+        <strong>Core Hypothesis:</strong> Fovea-inspired attention mechanisms can significantly improve deep learning models by selectively processing informative regions at high resolution while maintaining contextual awareness.
     </div>
     
     <h3>Experimental Setup</h3>
     <table>
-        <tr><th>Parameter</th><th>Value</th></tr>
-        <tr><td>Dataset</td><td>CIFAR-10 (32x32 RGB, 10 classes)</td></tr>
-        <tr><td>Training Set</td><td>50,000 images</td></tr>
-        <tr><td>Test Set</td><td>10,000 images</td></tr>
-        <tr><td>Optimizer</td><td>Adam (lr=0.001)</td></tr>
-        <tr><td>Batch Size</td><td>128</td></tr>
-        <tr><td>Device</td><td>Apple M-series GPU (MPS)</td></tr>
-        <tr><td>Early Stopping</td><td>Patience = 5 epochs</td></tr>
+        <tr><td><strong>Dataset</strong></td><td>CIFAR-10 (32x32 RGB, 10 classes)</td></tr>
+        <tr><td><strong>Training</strong></td><td>50,000 images</td></tr>
+        <tr><td><strong>Test</strong></td><td>10,000 images</td></tr>
+        <tr><td><strong>Optimizer</strong></td><td>Adam (lr=0.001)</td></tr>
+        <tr><td><strong>Batch Size</strong></td><td>128</td></tr>
+        <tr><td><strong>Device</strong></td><td>Apple M-series GPU (MPS)</td></tr>
     </table>
 </section>
 
-<!-- RESEARCH PHASES -->
-<section id="phases">
-    <h2>Research Phases</h2>
+<!-- MODULES -->
+<section id="modules">
+    <h2>Module Details</h2>
     
-    <!-- Phase 0: Baseline -->
-    <div class="phase" id="phase0">
-        <div class="phase-header">
-            <span class="phase-title">Phase 0: Baseline Establishment</span>
-            <span class="phase-score">60.00%</span>
+    <!-- M1 Baseline -->
+    <div class="module" id="m1">
+        <div class="module-header">
+            <span class="module-title">M1: Plain ResNet18 Baseline</span>
+            <span class="module-score">60.00%</span>
         </div>
+        <p><strong>Research Motivation:</strong> Every meaningful experiment requires a control group. Before claiming that fovea attention provides any benefit, we need a reliable baseline measuring vanilla architecture performance on CIFAR-10. Plain ResNet18, without any attention mechanisms, serves as this essential reference point.</p>
         
-        <h4>Research Motivation</h4>
-        <p>Every meaningful experiment requires a control group. Before claiming that fovea attention provides any benefit, we need a reliable baseline measuring vanilla architecture performance on CIFAR-10. Plain ResNet18, without any attention mechanisms, serves as this essential reference point.</p>
+        <p><strong>Technical Principle:</strong> ResNet18 consists of 4 residual blocks with skip connections. Each block contains two convolutional layers with batch normalization and ReLU activation. The architecture progressively increases channels (64, 128, 256, 512) while reducing spatial dimensions through strided convolutions.</p>
         
-        <p>This phase establishes the performance ceiling that subsequent fovea-inspired approaches must exceed. The baseline also reveals inherent difficulty: with only 32x32 pixel images and 10 balanced classes, achieving high accuracy requires sophisticated techniques.</p>
+        <p><strong>Experimental Results:</strong> Initial experiments with 5 epochs showed 60% accuracy. Extended training (20 epochs) achieved 82.20%, demonstrating that training duration is crucial for fair architecture comparison. This finding is essential: longer training is required for all subsequent experiments.</p>
         
-        <h4>Technical Principle</h4>
-        <p>ResNet18 consists of 4 residual blocks with skip connections. Each block contains two convolutional layers with batch normalization and ReLU activation. The architecture progressively increases channels (64-128-256-512) while reducing spatial dimensions.</p>
+        <p><strong>Key Insights:</strong> Plain ResNet18 treats all image regions equally with no selective attention. It establishes the baseline that our fovea-inspired approaches must exceed to demonstrate value. The baseline also reveals that CIFAR-10 classification has room for significant improvement through architectural innovations.</p>
         
-        <pre>Input(32x32) → Conv1+BN+ReLU → Layer1-4 → AvgPool → FC(10)</pre>
+        <p class="word-count">Words: ~250</p>
+    </div>
+    
+    <!-- M2 FoveaResNet -->
+    <div class="module" id="m2">
+        <div class="module-header">
+            <span class="module-title">M2: FoveaResNet (Fixed Center)</span>
+            <span class="module-score">68.99%</span>
+        </div>
+        <p><strong>Research Motivation:</strong> Humans evolved the fovea because not all visual information is equally important. The center of gaze typically contains the object of interest, while peripheral vision provides context. This module tests the fundamental hypothesis: can mimicking biological foveal architecture improve neural networks?</p>
         
-        <h4>Experimental Results</h4>
-        <p>Initial experiments with 5 epochs: <strong>60%</strong>. Extended training (20 epochs): <strong>82.20%</strong>. This dramatic improvement demonstrates that training duration is crucial for fair architecture comparison. Longer training is essential for all subsequent experiments.</p>
+        <p><strong>Technical Principle:</strong> FoveaResNet processes the image in two parallel streams: (1) Center path: Extracts high-resolution features from an 8x8 central patch representing 6.25% of the image. (2) Periphery path: Downsamples the entire image 2x, extracts features, then upsamples back. Features are combined via element-wise addition.</p>
         
-        <h4>Key Insights</h4>
-        <ul>
-            <li>Training duration significantly impacts accuracy</li>
-            <li>Plain ResNet18 treats all pixels equally</li>
-            <li>No selective attention mechanism</li>
-            <li>Establishes baseline for improvement measurement</li>
-        </ul>
+        <p><strong>Critical Bug Fix:</strong> Initial implementation used torch.zeros_like(x) for padding, which destroyed peripheral features. The fix uses spatial masking to preserve periphery while adding high-resolution center features. This bug explains initial poor accuracy (52%) and dramatic improvement after fix (68.99%).</p>
+        
+        <p><strong>Experimental Results:</strong> Achieved +8.99% improvement over 5-epoch baseline. The optimal center size of 8x8 represents 6.25% of the 32x32 image - remarkably consistent with human vision where the fovea covers 1-2% of visual field but provides most visual acuity.</p>
         
         <p class="word-count">Words: ~280</p>
     </div>
     
-    <!-- Phase 1: Fovea Attention -->
-    <div class="phase" id="phase1">
-        <div class="phase-header">
-            <span class="phase-title">Phase 1: Fovea Attention Foundation (M2)</span>
-            <span class="phase-score">68.99%</span>
+    <!-- M9 Learnable -->
+    <div class="module" id="m9">
+        <div class="module-header">
+            <span class="module-title">M9: Learnable Fovea with GlimpseLocator</span>
+            <span class="module-score">63.63%</span>
+        </div>
+        <p><strong>Research Motivation:</strong> If fixed center fovea improves performance, perhaps optimal positioning could improve further. Not all interesting objects are centered - sometimes the subject is off-center. This module explores whether the network can learn to predict where to look based on image content.</p>
+        
+        <p><strong>Technical Principle:</strong> GlimpseLocator processes feature maps through spatial attention to produce a probability distribution over image locations. Soft-argmax computes a differentiable "center of attention" that can be trained via backpropagation. This location then guides fovea positioning dynamically.</p>
+        
+        <p><strong>Experimental Results:</strong> Surprisingly, learnable fovea (63.63%) performed worse than fixed center (68.99%). Analysis revealed that GlimpseLocator quickly converged to predicting near-center locations, suggesting that for CIFAR-10 images, optimal gaze is typically close to center anyway.</p>
+        
+        <div class="highlight">
+            <strong>Key Finding:</strong> For CIFAR-10 with centered objects, fixed center is already near-optimal. Learned positioning provides greater benefits when objects are frequently off-center.
         </div>
         
-        <h4>Research Motivation</h4>
-        <p>Humans evolved the fovea because not all visual information is equally important. The center of gaze typically contains the object of interest, while peripheral vision provides context. This phase tests the fundamental hypothesis: <strong>can mimicking biological foveal architecture improve neural networks?</strong></p>
+        <p class="word-count">Words: ~230</p>
+    </div>
+    
+    <!-- Module 3 UncertaintyViT -->
+    <div class="module" id="module3">
+        <div class="module-header">
+            <span class="module-title">Module 3: UncertaintyViT with MC Dropout</span>
+            <span class="module-score">72.40%</span>
+        </div>
+        <p><strong>Research Motivation:</strong> Beyond attention mechanisms, we wondered: can models quantify their uncertainty? In critical applications (medical diagnosis, autonomous vehicles), knowing when the model is uncertain is as important as correct predictions. This module combines Vision Transformers with Bayesian uncertainty estimation.</p>
         
-        <p>The choice of fixed center (always processing image center at high resolution) is deliberate. Before exploring complex learned attention mechanisms, we must establish whether the basic principle of hierarchical resolution provides benefits.</p>
+        <p><strong>Technical Principle:</strong> Monte Carlo Dropout runs multiple forward passes with dropout enabled. The mean across passes serves as prediction, while standard deviation indicates uncertainty. This approximates Bayesian inference, treating network weights as distributions rather than point estimates. Five passes provide good uncertainty estimates while remaining computationally tractable.</p>
         
-        <h4>Technical Principle</h4>
-        <p>FoveaResNet processes the image in two parallel streams:</p>
-        <ul>
-            <li><strong>Center Path</strong>: Extracts high-resolution features from an 8x8 central patch</li>
-            <li><strong>Periphery Path</strong>: Downsamples the entire image 2x, extracts features, then upsamples back</li>
-        </ul>
-        <p>Features are combined via element-wise addition after upsampling to match spatial dimensions.</p>
-        
-        <pre>Input → Conv1+L1+L2 → [Center: 8x8 full-res | Periphery: 2x down → process → upsample] → Add → L3+L4</pre>
-        
-        <h4>Critical Bug Fix</h4>
-        <p>Initial implementation used <code>torch.zeros_like(x)</code> for padding, destroying peripheral features. The fix uses spatial masking to preserve periphery while adding high-resolution center features. This bug explains initial poor accuracy (52%) and dramatic improvement after fix (68.99%).</p>
-        
-        <h4>Experimental Results</h4>
-        <p><strong>+8.99% improvement</strong> over 5-epoch baseline. The optimal center size of 8x8 represents 6.25% of the 32x32 image - remarkably consistent with human vision where the fovea covers 1-2% of visual field but provides most visual acuity.</p>
+        <p><strong>Experimental Results:</strong> Achieved 72.40% test accuracy, representing +12.4% improvement over baseline. Notably, uncertainty values increase during training (from 0.16 to 0.38), suggesting the model becomes more calibrated as training progresses.</p>
         
         <div class="key-finding">
-            <strong>Key Finding:</strong> Fovea attention works! Processing only 6.25% of pixels at full resolution improves accuracy while reducing computational load.
+            <strong>Key Finding:</strong> ViT architecture significantly outperforms ResNet for this task, and uncertainty estimation provides confidence scores without accuracy penalty.
         </div>
         
-        <p class="word-count">Words: ~380</p>
+        <p class="word-count">Words: ~240</p>
     </div>
     
-    <!-- Phase 2: Learnable Mechanisms -->
-    <div class="phase" id="phase2">
-        <div class="phase-header">
-            <span class="phase-title">Phase 2: Learnable Mechanisms (M9)</span>
-            <span class="phase-score">63.63%</span>
+    <!-- Module 4 MRAM -->
+    <div class="module" id="module4">
+        <div class="module-header">
+            <span class="module-title">Module 4: MRAM (Multi-Resolution Adaptive Mapping)</span>
+            <span class="module-score">66.06%</span>
         </div>
+        <p><strong>Research Motivation:</strong> What if we process multiple resolution levels simultaneously? Instead of just center vs periphery, MRAM uses a 3-level pyramid (1x, 2x, 4x downsampling) with learnable fusion weights. This explores whether finer granularity in resolution levels improves feature extraction.</p>
         
-        <h4>Research Motivation</h4>
-        <p>If fixed center fovea improves performance, perhaps optimal positioning could improve further. Not all interesting objects are centered - sometimes the subject is off-center. This phase explores whether the network can learn to predict where to look based on image content.</p>
+        <p><strong>Technical Principle:</strong> Three parallel streams process the input at different resolutions. Each stream applies convolutional processing, then all streams are upsampled to original size. Learnable softmax-normalized weights determine fusion. The network learned weights of w1=0.61, w2=0.23, w3=0.17, showing clear preference for high-resolution features.</p>
         
-        <p>The GlimpseLocator network is inspired by saccadic eye movements in biological systems. Before making classification decisions, the visual system rapidly shifts gaze to informative regions. Can artificial systems learn similar behavior?</p>
+        <p><strong>Experimental Results:</strong> MRAM achieved 66.06% test accuracy. The learned weights show clear preference: 61% for highest resolution, 23% for medium, 17% for lowest. This confirms that higher resolution features are most informative for CIFAR-10 classification.</p>
         
-        <h4>Technical Principle</h4>
-        <p>GlimpseLocator processes feature maps through spatial attention to produce a probability distribution over image locations. Soft-argmax computes a differentiable "center of attention" that can be trained via backpropagation.</p>
-        
-        <pre>Features → Spatial Attention → Soft-Argmax → Location(cx,cy) → Fovea Positioning</pre>
-        
-        <h4>Implementation</h4>
-        <pre>class GlimpseLocator(nn.Module):
-    def forward(self, features):
-        attn = self.spatial_attention(features)  # [B, 1, H, W]
-        attn_flat = F.softmax(attn.view(B, -1))
-        # Soft-argmax for differentiable center
-        cx = (attn_flat * grid_x).sum()
-        cy = (attn_flat * grid_y).sum()
-        return torch.tanh(torch.stack([cx, cy]))</pre>
-        
-        <h4>Experimental Results</h4>
-        <p><strong>Surprisingly, learnable fovea (63.63%) &lt; fixed center (68.99%)</strong>. Analysis revealed that GlimpseLocator quickly converges to predicting near-center locations, suggesting that for CIFAR-10 images, optimal gaze is typically close to center anyway.</p>
-        
-        <div class="warning">
-            <strong>Surprising Finding:</strong> For CIFAR-10 with centered objects, fixed center is already near-optimal. Learned positioning provides greater benefits when objects are frequently off-center.
-        </div>
-        
-        <h4>Key Insights</h4>
-        <ul>
-            <li>Network can learn spatial attention</li>
-            <li>CIFAR-10 objects are typically centered</li>
-            <li>Fixed center is a strong baseline</li>
-            <li>Learnable attention benefits larger, more complex datasets</li>
-        </ul>
-        
-        <p class="word-count">Words: ~380</p>
+        <p class="word-count">Words: ~220</p>
     </div>
     
-    <!-- Phase 3: Transformer Exploration -->
-    <div class="phase" id="phase3">
-        <div class="phase-header">
-            <span class="phase-title">Phase 3: Transformer Exploration (M10-M11)</span>
-            <span class="phase-score">72.40%</span>
+    <!-- M14 RL BEST -->
+    <div class="module best" id="m14">
+        <div class="module-header">
+            <span class="module-title">M14: RL-Based Gaze Control (BEST)</span>
+            <span class="module-score">84.80%</span>
         </div>
+        <p><strong>Research Motivation:</strong> The ultimate goal of fovea attention is active, intelligent gaze selection. Rather than relying on fixed positions or simple heuristics, can the system learn to look at the most informative image regions? This module applies reinforcement learning (PPO) to optimize fovea positioning end-to-end.</p>
         
-        <h4>Research Motivation</h4>
-        <p>Beyond attention mechanisms, we wondered: can models quantify their uncertainty? In critical applications (medical diagnosis, autonomous vehicles), knowing when the model is uncertain is as important as correct predictions. This phase combines Vision Transformers with Bayesian uncertainty estimation.</p>
+        <p><strong>Technical Principle:</strong> Proximal Policy Optimization (PPO) with clipped surrogate objective enables stable policy learning. The policy network outputs continuous gaze coordinates (cx, cy). The reward is classification accuracy, with exploration encouraged through entropy bonus. Generalized Advantage Estimation (GAE) provides variance reduction.</p>
         
-        <p>The choice of ViT architecture reflects its success in modern computer vision. Transformers process images as sequences of patches, naturally supporting attention mechanisms. MC Dropout provides practical uncertainty estimation without expensive ensemble training.</p>
+        <p><strong>Implementation:</strong> The GlimpsePolicy network encodes features and outputs mean and standard deviation for a Gaussian distribution over gaze locations. PPO updates the policy by maximizing expected rewards while constraining policy changes through clipping. This enables stable learning of complex gaze strategies.</p>
         
-        <h4>Technical Principle</h4>
-        <p>Monte Carlo Dropout runs multiple forward passes with dropout enabled. The mean across passes serves as prediction, while standard deviation indicates uncertainty. This approximates Bayesian inference, treating network weights as distributions.</p>
-        
-        <pre>Input → Patch Embed → Transformer Blocks → [x5 MC passes] → Mean=Prediction, Std=Uncertainty</pre>
-        
-        <h4>Implementation</h4>
-        <pre>def mc_forward(self, x, n_passes=5):
-    self.train()  # Enable dropout
-    logits_list = []
-    for _ in range(n_passes):
-        with torch.no_grad():
-            logits_list.append(self(x))
-    logits_stack = torch.stack(logits_list)
-    return logits_stack.mean(dim=0), logits_stack.std(dim=0)</pre>
-        
-        <h4>Experimental Results</h4>
-        <p><strong>72.40% test accuracy</strong>, representing +12.4% improvement over baseline. Notably, uncertainty values increase during training (from 0.16 to 0.38), suggesting the model becomes more calibrated as training progresses.</p>
-        
-        <div class="key-finding">
-            <strong>Key Finding:</strong> ViT architecture outperforms ResNet for this task, and uncertainty estimation provides confidence scores without accuracy penalty.
-        </div>
-        
-        <h4>Key Insights</h4>
-        <ul>
-            <li>ViT excels at CIFAR-10 classification</li>
-            <li>Uncertainty provides calibrated confidence</li>
-            <li>MC Dropout is computationally tractable</li>
-            <li>Architecture choice matters significantly</li>
-        </ul>
-        
-        <p class="word-count">Words: ~400</p>
-    </div>
-    
-    <!-- Phase 4: Multi-Level Architecture -->
-    <div class="phase" id="phase4">
-        <div class="phase-header">
-            <span class="phase-title">Phase 4: Multi-Level Architecture (M12-M13)</span>
-            <span class="phase-score">66.06%</span>
-        </div>
-        
-        <h4>Research Motivation</h4>
-        <p>What if we process multiple resolution levels simultaneously? Instead of just center vs periphery, MRAM uses a 3-level pyramid (1x, 2x, 4x downsampling) with learnable fusion weights. This explores whether finer granularity in resolution levels improves feature extraction.</p>
-        
-        <p>The pyramid architecture is inspired by image processing techniques and biological visual systems that process information at multiple scales. By learning optimal fusion weights, the network can adaptively emphasize the most useful resolution levels.</p>
-        
-        <h4>Technical Principle</h4>
-        <p>Three parallel streams process the input at different resolutions. Each stream applies convolutional processing, then all streams are upsampled to original size. Learnable softmax-normalized weights determine fusion.</p>
-        
-        <pre>Input → [Level1(full-res) + Level2(2x↓) + Level3(4x↓)] → Learnable Weights → Fusion</pre>
-        
-        <h4>Experimental Results</h4>
-        <p>MRAM achieves <strong>66.06%</strong> test accuracy. The learned weights show clear preference: <strong>w1=61%</strong> (highest resolution) &gt; w2=23% &gt; w3=17%. This confirms that higher resolution features are most informative.</p>
-        
-        <div class="warning">
-            <strong>Observation:</strong> Multi-resolution processing underperforms simpler two-level approaches. For 32x32 images, simpler architectures suffice. Multi-resolution may benefit larger images (ImageNet) where scale variation is more significant.
-        </div>
-        
-        <h4>Hybrid Experiment (M13)</h4>
-        <p>Combining MRAM with UncertaintyViT yielded 57.24% - <strong>worse than both parent architectures</strong>. This demonstrates that architectural "additions" must be carefully designed. Multi-task learning with incompatible objectives can degrade performance.</p>
-        
-        <p class="word-count">Words: ~380</p>
-    </div>
-    
-    <!-- Phase 5: Advanced Strategies -->
-    <div class="phase best" id="phase5">
-        <div class="phase-header">
-            <span class="phase-title">Phase 5: Advanced Strategies (M14-M15) - BEST</span>
-            <span class="phase-score">84.80%</span>
-        </div>
-        
-        <h4>Research Motivation</h4>
-        <p>The ultimate goal of fovea attention is <strong>active, intelligent gaze selection</strong>. Rather than relying on fixed positions or simple heuristics, can the system learn to look at the most informative image regions? This phase applies reinforcement learning (PPO) to optimize fovea positioning end-to-end.</p>
-        
-        <p>Reinforcement learning provides a natural framework for gaze control: the policy network selects gaze positions, the environment provides rewards based on classification accuracy, and policy gradient methods optimize gaze selection directly.</p>
-        
-        <h4>Technical Principle</h4>
-        <p>Proximal Policy Optimization (PPO) with clipped surrogate objective enables stable policy learning. The policy network outputs continuous gaze coordinates (cx, cy). The reward is classification accuracy, with exploration encouraged through entropy bonus.</p>
-        
-        <pre>Image → FoveaResNet(backbone) → Features → [PPO Policy → Glimpse] → Classification → Reward → PPO Update</pre>
-        
-        <h4>Implementation</h4>
-        <pre>class GlimpsePolicy(nn.Module):
-    def forward(self, features):
-        x = self.encoder(features)
-        mean = torch.tanh(self.mean_head(x))  # [-1, 1]
-        return mean, torch.exp(self.log_std)
-
-# PPO Update
-ratio = torch.exp(new_log_prob - old_log_prob)
-surr1 = ratio * advantages
-surr2 = torch.clamp(ratio, 1-eps, 1+eps) * advantages
-policy_loss = -torch.min(surr1, surr2).mean()</pre>
-        
-        <h4>Experimental Results</h4>
-        <p><strong>84.80% test accuracy</strong>, representing a <strong>+24.8% improvement</strong> over baseline. This is the best result across all phases, demonstrating that RL-based active attention significantly outperforms passive methods.</p>
+        <p><strong>Experimental Results:</strong> Achieved 84.80% test accuracy, representing +24.8% improvement over baseline. This is the best result across all modules, demonstrating that RL-based active attention significantly outperforms all passive methods.</p>
         
         <table>
             <tr><th>Metric</th><th>Value</th></tr>
             <tr><td>Test Accuracy</td><td><strong>84.80%</strong></td></tr>
-            <tr><td>Improvement</td><td><strong>+24.8%</strong></td></tr>
             <tr><td>PPO Clip Epsilon</td><td>0.2</td></tr>
             <tr><td>Entropy Coefficient</td><td>0.01</td></tr>
             <tr><td>Discount Factor</td><td>0.99</td></tr>
@@ -398,15 +235,7 @@ policy_loss = -torch.min(surr1, surr2).mean()</pre>
             <strong>Key Finding:</strong> RL-based active gaze (84.80%) vastly outperforms fixed fovea (68.99%) and all other approaches. The network learns to dynamically position attention based on image content.
         </div>
         
-        <h4>Key Insights</h4>
-        <ul>
-            <li>Active attention dramatically outperforms passive methods</li>
-            <li>PPO provides stable policy optimization</li>
-            <li>End-to-end differentiable training is possible</li>
-            <li>RL-based methods set new state-of-the-art</li>
-        </ul>
-        
-        <p class="word-count">Words: ~450</p>
+        <p class="word-count">Words: ~300</p>
     </div>
 </section>
 
@@ -415,32 +244,26 @@ policy_loss = -torch.min(surr1, surr2).mean()</pre>
     <h2>Complete Results</h2>
     
     <table>
-        <tr><th>Rank</th><th>Phase/Module</th><th>Architecture</th><th>Test Acc</th><th>vs Baseline</th><th>Type</th></tr>
-        <tr class="best"><td>🥇</td><td><strong>M14 RL</strong></td><td>FoveaResNet + PPO</td><td><strong>84.80%</strong></td><td><strong>+24.80%</strong></td><td><span class="tag rl">RL</span></td></tr>
-        <tr><td>🥈</td><td>M1 Extended</td><td>ResNet18 (20ep)</td><td>82.20%</td><td>+22.20%</td><td><span class="tag baseline">Baseline</span></td></tr>
-        <tr><td>🥉</td><td>M2 Extended</td><td>FoveaResNet (20ep)</td><td>81.93%</td><td>+21.93%</td><td><span class="tag fovea">Fovea</span></td></tr>
-        <tr><td>4</td><td>M11 UncertaintyViT</td><td>ViT + MC Dropout</td><td>72.40%</td><td>+12.40%</td><td><span class="tag vit">ViT</span></td></tr>
-        <tr><td>5</td><td>M2 FoveaResNet</td><td>Fovea (5ep)</td><td>68.99%</td><td>+8.99%</td><td><span class="tag fovea">Fovea</span></td></tr>
-        <tr><td>6</td><td>M12 MRAM</td><td>Multi-Res Pyramid</td><td>66.06%</td><td>+6.06%</td><td>Multi-Res</td></tr>
+        <tr><th>Rank</th><th>Module</th><th>Architecture</th><th>Test Acc</th><th>vs Baseline</th><th>Type</th></tr>
+        <tr class="best"><td>1</td><td><strong>M14 RL</strong></td><td>FoveaResNet + PPO</td><td><strong>84.80%</strong></td><td><strong>+24.80%</strong></td><td><span class="tag rl">RL</span></td></tr>
+        <tr><td>2</td><td>M1 Extended</td><td>ResNet18 (20ep)</td><td>82.20%</td><td>+22.20%</td><td>Baseline</td></tr>
+        <tr><td>3</td><td>M2 Extended</td><td>FoveaResNet (20ep)</td><td>81.93%</td><td>+21.93%</td><td><span class="tag fovea">Fovea</span></td></tr>
+        <tr><td>4</td><td>Module 3</td><td>UncertaintyViT</td><td>72.40%</td><td>+12.40%</td><td>ViT</td></tr>
+        <tr><td>5</td><td>M2 Baseline</td><td>FoveaResNet (5ep)</td><td>68.99%</td><td>+8.99%</td><td><span class="tag fovea">Fovea</span></td></tr>
+        <tr><td>6</td><td>Module 4</td><td>MRAM</td><td>66.06%</td><td>+6.06%</td><td>Multi-Res</td></tr>
         <tr><td>7</td><td>M9 Learnable</td><td>ResNet + Glimpse</td><td>63.63%</td><td>+3.63%</td><td>Learnable</td></tr>
-        <tr><td>8</td><td>M13 Hybrid</td><td>MRAM + Uncertainty</td><td>57.24%</td><td>-2.76%</td><td>Hybrid</td></tr>
-        <tr><td>9</td><td>M1 Baseline</td><td>Plain ResNet18</td><td>60.00%</td><td>0%</td><td><span class="tag baseline">Baseline</span></td></tr>
+        <tr><td>8</td><td>M1 Baseline</td><td>Plain ResNet18</td><td>60.00%</td><td>0%</td><td>Baseline</td></tr>
     </table>
     
     <h3>Visualizations</h3>
     <div class="chart-container">
-        <h4>Experiment Comparison</h4>
-        <img src="../vis/experiment_comparison.png" alt="Experiment Comparison">
+        <img src="vis/experiment_comparison.png" alt="Experiment Comparison">
     </div>
-    
     <div class="chart-container">
-        <h4>Architecture Evolution</h4>
-        <img src="../vis/architecture_evolution.png" alt="Architecture Evolution">
+        <img src="vis/architecture_evolution.png" alt="Architecture Evolution">
     </div>
-    
     <div class="chart-container">
-        <h4>Ablation Study: Center Size</h4>
-        <img src="../vis/ablation_study.png" alt="Ablation Study">
+        <img src="vis/ablation_study.png" alt="Ablation Study">
     </div>
 </section>
 
@@ -449,12 +272,12 @@ policy_loss = -torch.min(surr1, surr2).mean()</pre>
     <h2>Ablation Study</h2>
     
     <h3>Center Size Analysis</h3>
-    <p>The center size determines how much of the image is processed at full resolution. We tested sizes from 4x4 to 16x16 to find the optimal balance.</p>
+    <p>The center size determines how much of the image is processed at full resolution. We tested sizes from 4x4 to 16x16.</p>
     
     <table>
         <tr><th>Center Size</th><th>Test Accuracy</th><th>Analysis</th></tr>
         <tr><td>4x4 (1.56%)</td><td>56.58%</td><td>Too small - limited high-resolution region</td></tr>
-        <tr><td>8x8 (6.25%)</td><td><strong>68.99%</strong></td><td><strong>Optimal balance</strong></td></tr>
+        <tr class="best"><td>8x8 (6.25%)</td><td><strong>68.99%</strong></td><td><strong>Optimal balance</strong></td></tr>
         <tr><td>12x12 (14.06%)</td><td>61.03%</td><td>Too large - reduced peripheral information</td></tr>
         <tr><td>16x16 (25%)</td><td>59.50%</td><td>Almost no periphery - defeats purpose</td></tr>
     </table>
@@ -464,56 +287,23 @@ policy_loss = -torch.min(surr1, surr2).mean()</pre>
     </div>
 </section>
 
-<!-- COMPARISON -->
-<section id="comparison">
-    <h2>RL vs Passive Methods Comparison</h2>
-    
-    <div class="comparison-grid">
-        <div>
-            <h4>RL-Based (M14)</h4>
-            <p><strong>84.80%</strong> - Active attention with PPO</p>
-            <ul>
-                <li>Learns optimal gaze from rewards</li>
-                <li>Dynamic, content-dependent center</li>
-                <li>Highest accuracy</li>
-                <li>Requires reward engineering</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Passive Methods (M2, M9)</h4>
-            <p><strong>68.99%</strong> - Fixed/heuristic attention</p>
-            <ul>
-                <li>Simpler implementation</li>
-                <li>No reward shaping needed</li>
-                <li>Fixed center or simple heuristics</li>
-                <li>Lower but still improved accuracy</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="highlight">
-        <strong>Conclusion:</strong> RL-based methods significantly outperform passive approaches. Active gaze selection is crucial for optimal performance.
-    </div>
-</section>
-
 <!-- CONCLUSIONS -->
 <section id="conclusions">
     <h2>Key Findings & Conclusions</h2>
     
     <div class="key-finding">
-        <h4>Best Result</h4>
-        <p><strong>M14 RL with FoveaResNet: 84.80% test accuracy</strong></p>
-        <p>This represents a <strong>+24.8% improvement</strong> over the plain ResNet18 baseline.</p>
+        <h3>Best Result: 84.80%</h3>
+        <p>M14 RL with FoveaResNet achieves <strong>+24.8% improvement</strong> over plain ResNet18 baseline.</p>
     </div>
     
     <h3>Research Timeline</h3>
     <ol>
-        <li><strong>Phase 0</strong>: Baseline ResNet18 (60%)</li>
-        <li><strong>Phase 1</strong>: +Fovea Attention (68.99%)</li>
-        <li><strong>Phase 2</strong>: +Learnable Glimpse (63.63%)</li>
-        <li><strong>Phase 3</strong>: +Transformer + Uncertainty (72.40%)</li>
-        <li><strong>Phase 4</strong>: +Multi-Resolution (66.06%)</li>
-        <li><strong>Phase 5</strong>: +RL Gaze Control (84.80%) <strong>Best</strong></li>
+        <li><strong>Phase 0:</strong> Baseline ResNet18 (60%)</li>
+        <li><strong>Phase 1:</strong> +Fovea Attention (68.99%)</li>
+        <li><strong>Phase 2:</strong> +Learnable Glimpse (63.63%)</li>
+        <li><strong>Phase 3:</strong> +Transformer + Uncertainty (72.40%)</li>
+        <li><strong>Phase 4:</strong> +Multi-Resolution (66.06%)</li>
+        <li><strong>Phase 5:</strong> +RL Gaze Control (84.80%) <strong>Best</strong></li>
     </ol>
     
     <h3>Key Takeaways</h3>
@@ -522,16 +312,6 @@ policy_loss = -torch.min(surr1, surr2).mean()</pre>
         <li><strong>RL-based control is superior</strong> - Active gaze beats passive attention</li>
         <li><strong>Optimal center size exists</strong> - 8x8 for 32x32 images</li>
         <li><strong>Architecture matters</strong> - ViT outperforms ResNet for this task</li>
-        <li><strong>Uncertainty helps</strong> - Provides confidence scores</li>
-        <li><strong>Simple combinations can fail</strong> - M13 hybrid underperformed</li>
-    </ul>
-    
-    <h3>Future Work</h3>
-    <ul>
-        <li>Scale to larger datasets (CIFAR-100, ImageNet)</li>
-        <li>Real-time gaze control applications</li>
-        <li>Hierarchical attention across multiple scales</li>
-        <li>Multi-object scene understanding</li>
     </ul>
 </section>
 
